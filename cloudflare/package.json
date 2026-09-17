@@ -1,0 +1,19 @@
+{
+  "name": "random-mage-cloudflare",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run",
+    "typecheck": "tsc --noEmit",
+    "types": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260917.1",
+    "@types/node": "^22.20.3",
+    "typescript": "^5.9.2",
+    "wrangler": "4.134.0"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "random-mage-pixiv",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "APP_VERSION": "0.1.0-cf",
+    "SHARD_COUNT": "8"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
+  "d1_databases": [
+    {
+      "binding": "META_DB",
+      "database_name": "random-mage-meta",
+      "database_id": "cfcfe8b2-56d2-4cfc-98e3-59e1768cc0eb",
+      "migrations_dir": "migrations/meta"
+    },
+    {
+      "binding": "DB_00",
+      "database_name": "random-mage-00",
+      "database_id": "ad33229e-a35d-4745-822c-d868d1f8613c",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_01",
+      "database_name": "random-mage-01",
+      "database_id": "60342fb0-6e11-496f-bdc5-f7b8680a7ebe",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_02",
+      "database_name": "random-mage-02",
+      "database_id": "00afc2e1-2752-41d7-be1b-6beed773d7f9",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_03",
+      "database_name": "random-mage-03",
+      "database_id": "c8e5e7cb-6772-4a36-b4e4-c70d5f677e39",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_04",
+      "database_name": "random-mage-04",
+      "database_id": "43f9891c-5b6e-42b8-a536-18bdcc38be9c",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_05",
+      "database_name": "random-mage-05",
+      "database_id": "acfb8278-18b3-413d-af8b-db26acf64135",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_06",
+      "database_name": "random-mage-06",
+      "database_id": "5465912c-bc22-4e7a-bc36-3c2ae5a1a786",
+      "migrations_dir": "migrations/shard"
+    },
+    {
+      "binding": "DB_07",
+      "database_name": "random-mage-07",
+      "database_id": "f357410e-f860-4692-ab6c-ab471ae14855",
+      "migrations_dir": "migrations/shard"
+    }
+  ]
+}
